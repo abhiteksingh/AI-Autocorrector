@@ -24,7 +24,7 @@ class CorrectionRequest(BaseModel):
     tone:str
 
 class CorrectionResponse(BaseModel):
-    corrected_text: str = Field(desciption="The fully corrected and refined version of the input text.")
+    corrected_text: str = Field(description="The fully corrected and refined version of the input text.")
     key_changes: List[str] = Field(description="A list of 2 to 3 short phrases describing the changes made, e.g., 'Fixed Grammar', 'Tone Adjusted to Formal'.")
 
 llm=ChatGroq(model="qwen/qwen3.6-27b", temperature=0.8)
